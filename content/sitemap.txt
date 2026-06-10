@@ -1,0 +1,1413 @@
+
+GhanaExpats.com
+Powered by Communly
+Master Sitemap, Functional Specification & Website Copy
+Single working document  ·  Berecons  ·  May 2026  ·  Confidential
+This document is structured in four parts:
+	•	Part A — Sitemap Diagram: Visual navigation tree and page inventory
+	•	Part B — Wireframe Content Map: Page-by-page layout and content guide for the designer
+	•	Part C — Functional Specification: Backend systems, user roles, and technical requirements for the developer
+	•	Part D — Website Copy: Production-ready British English copy for every page
+Developer notes appear in amber-bordered boxes throughout. These are system instructions and must not appear on the live site.
+
+PART A
+Sitemap Diagram
+Visual navigation tree and full page inventory
+A.1  Primary Navigation Tree
+Each top-level item below is a primary navigation entry. Sub-items are dropdown menu entries. Items marked [Phase 2] are deferred and should not be built in the initial launch. Items marked [??] are placeholders requiring owner confirmation before development.
+
+Emergency
+Property
+Directory
+Business
+Guides
+Research Hub
+Diaspora
+Marketplace
+Social
+
+HOME  ·  ghanaexpats.com/
+
+1. Emergency Response
+Critical Emergencies
+  Security Escort & Dispatch
+  Ambulance & Medical Evacuation
+  Towing & Roadside Assistance
+  Urgent Homecare & Midnight Pharmacy
+Urgent Utilities
+  Water
+  Internet
+  LPG Gas
+  Power [Coming soon]
+2. Property & Investment
+Residential Lettings
+  Short-stay
+  Mid-term
+  Long-term
+  House Swap (free)
+Commercial Property
+Land & Property Acquisition
+3. Verified Directory
+Legal
+Health
+Emergency Services
+Schools & Education
+Transport
+Domestic Support
+  Nannies / Drivers / Gardeners
+  Caregivers  ·  Hiring  ·  Pay Structure
+Artisans & Trades
+  Plumbing  ·  Electrical  ·  Carpentry
+  Masonry  ·  Aluminium & Glass
+  Landscaping  ·  Construction
+
+4. Business in Ghana
+Business Registration
+Statutory Compliance
+  GRA  ·  SSNIT  ·  GTA  ·  GIPC  ·  GIS
+Due Diligence
+5. Relocation & Lifestyle Guides
+Arriving in Accra
+Finding Housing
+Healthcare for Expats
+International Schools
+[Phase 2] Driving in Accra
+[Phase 2] Visa & Immigration
+[Phase 2] Cost of Living
+[Phase 2] Safety & Security
+[Phase 2] Business in Ghana
+6. Research & Professional Hub
+The Snug Haven Collection
+  (academics, researchers, NGOs only)
+International Students & Internships
+Research Partnerships & Consultation
+Fieldwork Assistance & Community Access
+Visiting Professors & Consultants
+Residential & Immigration Support
+[Phase 2] Language Exchange
+
+7. Diaspora Heritage Journeys
+Heritage Tours
+Cultural Immersion
+Ancestral Connections
+Diaspora Leadership Exchange
+Healing & Reconnection
+Pan African Journeys
+8. Marketplace
+Peer-to-Peer Listings
+Vendor Shops
+9. Social & Lifestyle
+Monthly Meet & Greet
+Nightlife
+Food & Dining
+Art, Culture & Heritage
+
+10. Community Engagement
+Quarterly Training & Workshops
+[??] To be confirmed
+
+11. Join the Community
+Facebook Group Integration
+Email Capture
+
+List Your Business /list
+About Communly /about
+Contact /contact
+Join the Community /join
+
+A.2  Full Page Inventory
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+Auth column: None = public route. Logged-in pending vendor, Approved vendor, and Admin only = authenticated routes. All admin routes must be IP-restricted or on a separate subdomain.
+
+Page
+URL
+Phase
+Auth
+Primary function
+Homepage
+/
+1
+None
+Entry and routing hub for all audiences
+24/7 Emergency Response Hub
+/emergency-response
+1
+None / member gate
+Emergency and utility services directory
+Property & Investment hub
+/real-estate
+1
+None
+Browse all property listings
+Property listing page
+/real-estate/[slug]
+1
+None
+Full property detail with agent contact
+Verified Directory hub
+/directory
+1
+None
+Search all verified service listings
+Directory category page
+/directory/[category]
+1
+None
+Category-filtered listing view
+Individual listing page
+/directory/[category]/[slug]
+1
+None
+Full vendor profile with contact CTA
+Business in Ghana
+/business
+1
+None
+Statutory landscape, compliance, advisory routing
+The Snug Haven Collection
+/snug-haven
+1
+None
+Featured programme — fieldwork accommodation and research support
+Snug Haven property page
+/snug-haven/[property-slug]
+1
+None
+Individual property with rates and enquiry form
+Diaspora Heritage Journeys
+/diaspora-programme
+1
+None
+Heritage and cultural immersion programme
+Social & Lifestyle hub
+/discover
+1
+None
+Food, nightlife, art, culture, community events
+Relocation Guides hub
+/guides
+1
+None
+Content hub — all relocation and living guides
+Guide: Arriving in Accra
+/guides/arriving-in-accra
+1
+None
+First 30 days practical guide
+Guide: Finding Housing
+/guides/finding-housing-accra
+1
+None
+Rental market, agents, neighbourhoods
+Guide: International Schools
+/guides/international-schools-ghana
+1
+None
+Schools, fees, curriculum, admission
+Guide: Healthcare
+/guides/healthcare-expats-ghana
+1
+None
+Hospitals, insurance, pharmacies
+Guide: Driving in Accra
+/guides/driving-accra
+2
+None
+Licence, roads, car rental
+Guide: Visa & Immigration
+/guides/ghana-visa-immigration
+2
+None
+Visa types, processes, agents
+Guide: Cost of Living
+/guides/cost-of-living-accra
+2
+None
+Realistic budget guide
+Guide: Safety & Security
+/guides/safety-security-expats-ghana
+2
+None
+Practical safety information
+Guide: Business in Ghana
+/guides/business-in-ghana
+2
+None
+Registration, compliance, banking
+Marketplace hub
+/marketplace
+1
+None
+Browse all products and services
+Marketplace listing page
+/marketplace/[slug]
+1
+None
+Individual product or service listing
+Language Exchange
+/language-exchange
+2
+None
+Language partners and tutors
+Internships in Ghana
+/internships
+2
+None
+Internship listings and placements
+Research Assistance
+/research-assistance
+None
+Research assistant sourcing — feeds into Snug Haven
+Host Services
+/host-services
+2
+None
+Concierge and cultural guide services
+About Communly
+/about
+1
+None
+Who we are, community values, vetting standards
+Contact
+/contact
+1
+None
+Enquiries, vendor support, press, partnerships
+Join the Community
+/join
+1
+None
+Facebook Group join and email capture
+Vendor registration
+/register
+1
+None (creates account)
+Vendor registration and category selection
+Verification form
+/register/verify
+1
+Pending vendor
+Category-specific verification and document upload
+Vendor dashboard
+/dashboard
+1
+Approved vendor
+Self-service listing management
+Create listing
+/dashboard/listings/new
+1
+Approved vendor
+Listing creation — fields vary by category
+Edit listing
+/dashboard/listings/[id]/edit
+1
+Approved vendor
+Edit own listing
+Vendor public profile
+/vendors/[slug]
+1
+None
+Public-facing vendor profile with Verified Badge
+Admin dashboard
+/admin
+1
+Admin only
+Applications, listings, revenue, communications
+Admin: vendor applications
+/admin/vendors/pending
+1
+Admin only
+Approve, reject, or query pending applications
+Admin: all listings
+/admin/listings
+1
+Admin only
+View, flag, or remove any listing
+Admin: featured placements
+/admin/featured
+1
+Admin only
+Assign and schedule Featured Vendor slots
+Admin: commission tracker
+/admin/commissions
+2
+Admin only
+Log referrals, conversions, and invoices
+Admin: vendor communications
+/admin/messages
+1
+Admin only
+Direct messaging with vendors
+
+PART B
+Wireframe Content Map
+Page-by-page layout and content guide for the designer
+This section defines the content-to-layout mapping for every Phase 1 page. Each table row specifies a page region, its purpose, the content it carries, and the layout treatment to apply. This is the designer's brief. All copy referenced in the 'Content' column is written in full in Part D of this document.
+
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+Column guide: Region = the named section of the page. Purpose = why this region exists. Content = what goes here. Layout = the visual treatment. Measurements are indicative for desktop (1280px); mobile adaptations should be discussed with the developer.
+
+Region
+Purpose
+Content
+Layout
+
+B.1  Global Elements — every page
+Persistent header
+Brand identity and primary navigation
+Communly wordmark (green tick left), primary nav centre, 'Join 26,000 members →' CTA right with blue button linking to Facebook Group
+Sticky. Full-width. Height 64px. Collapses to hamburger at 768px.
+Facebook join band
+Persistent community invitation
+Member count badge + 'Join the Expats in Ghana community' + Facebook button
+Sits immediately below hero on homepage only. Appears in footer globally.
+Global footer
+Navigation, legal, brand note
+4-column link grid: Explore / Guides / Work With Us / About. Brand note. Legal line. Social links.
+Full-width. Dark green background. White text. 4 columns desktop, stacked mobile.
+
+B.2  Homepage — /
+Hero
+Immediate brand statement and primary CTAs
+Headline: 'Ghana, without the guesswork.' Sub-headline. Two CTA buttons: Browse directory / Join the community
+Full-width. Forest green background or high-quality Ghana photography. White text. 100vh on desktop.
+Audience routing
+Direct each visitor type to their correct section
+2×2 card grid. 4 cards: Relocating / Services / Researchers & NGOs / Diaspora. Each card: icon, headline, 2-line body, CTA link.
+2×2 grid desktop. Single column mobile. Cards have coloured left border matching section colour.
+Emergency response band
+Urgent service visibility
+Headline + 3-line description + CTA: Access the 24/7 Hub
+Full-width alert band. Red-tinted background. High contrast. Single row.
+Featured programmes
+Promote Snug Haven and Diaspora Programme
+Two panels side by side: Snug Haven (green) / Diaspora Programme (terracotta). Each: eyebrow, headline, body, CTA.
+2-column on desktop. Stacked on mobile. Each panel 50% width with distinct background colour.
+Directory preview
+Show directory breadth
+Section headline. 12 category icons with labels. Two CTAs: Search / List.
+3×4 icon grid desktop. 2×6 mobile. Icons: 48×48px, outlined style.
+Guides preview
+Funnel to content hub
+Section headline. 3 guide cards in a row.
+3-column card row desktop. Carousel or stacked mobile.
+Community section
+Drive Facebook Group membership
+Member count, community description, Facebook join button.
+Full-width. Sand/ochre background. Centred. Single CTA button.
+
+B.3  24/7 Emergency Response — /emergency-response
+Hero
+Urgency and authority
+Headline (TBD). Sub-headline. Two CTAs: Get Help Now (primary, oversized) / Explore Services.
+Full-width. Deep red or near-black background. White text. Hero CTA minimum 56px height — accessible tap target.
+Critical Emergencies
+Four emergency service cards
+Security Dispatch / Ambulance / Towing / Homecare. Each card: icon, title, body, CTA button.
+2×2 grid desktop. Single column mobile. Cards have prominent call button. Member gate applied at CTA level.
+Urgent Utilities
+Four utility service cards
+Water / Internet / LPG / Power (Coming Soon). Each: icon, title, body, CTA.
+2×2 grid. Power card greyed out with 'Coming Soon' + email capture overlay.
+How it works
+Reduce friction — explain the process
+3 steps: Tap for help / We dispatch / Pay via MoMo.
+Horizontal 3-step flow with numbered icons. Full-width.
+Membership gate
+Restrict booking to community members
+Prompt: 'Join the community to access emergency services' + Facebook Group join button.
+Modal or inline gate triggered at CTA click for non-members.
+
+B.4  Property & Investment — /real-estate
+Hero
+Search entry point
+Headline. Search bar with type, bedroom, price, furnished filters.
+Full-width. Photography background or green gradient. Search bar prominent.
+Trust note
+Build confidence in listings
+One paragraph on vetting process and Verified badge.
+Light grey band. Single full-width paragraph.
+Listing types
+Explain product range
+Short-stay / Mid-term / Long-term / Commercial / Land & Acquisition / House Swap. Each as a short card with icon and description.
+3-column grid desktop. Stacked mobile.
+Featured property
+Admin-curated premium listing
+Photo, headline, location, price, agent with Verified badge, CTA.
+Full-width feature card. Left: photo. Right: details.
+Listings grid
+Browse all properties
+Filterable card grid. Each card: photo, type badge, beds, location, price, agent badge, date.
+3-column grid desktop. 2-column tablet. 1-column mobile. Infinite scroll or pagination.
+Vendor pricing
+Explain listing cost structure
+Fee table: per listing / bundle / agent badge / commission.
+Simple 2-column table. Green header row. Sticky 'List your property' CTA.
+
+B.5  Verified Directory — /directory
+Hero
+Search entry point
+Headline. Search bar with category filter and location filter.
+Full-width. Clean white. Search bar is the primary element.
+Category grid
+Browse all 28 categories
+28 categories as icon tiles with labels.
+7×4 grid desktop. 4×7 tablet. 2-column mobile. Each tile links to /directory/[category].
+Verified badge explainer
+Define the trust signal
+What Communly Verified means — paragraph + free vs verified distinction.
+Light green callout band. Left-border accent.
+Vendor CTA
+Drive listing submissions
+Headline + body + CTA: List your business.
+Full-width. Sand background. Centred.
+
+B.6  Business in Ghana — /business
+Hero
+Credibility and authority
+Headline: 'Ghana is open for business.' Sub-headline.
+Full-width. Dark purple/navy background. White text.
+Overview sections
+Three topic areas with inline CTAs
+Business Registration / Statutory Compliance / Due Diligence. Each: headline, 2 paragraphs, inline directory CTA.
+Single column. Each section separated by a thin divider. CTAs are inline text links, not buttons.
+Directory routing
+Connect readers to professionals
+Two CTA buttons: Find a corporate lawyer / Find a registration agent.
+Centred button pair. Full-width band.
+
+B.7  The Snug Haven Collection — /snug-haven
+Hero
+Immediate positioning — fieldwork focus
+Headline + positioning line + two CTAs. Eyebrow: Fieldwork Accommodation & Research Support.
+Full-width. Forest green background. White text. Photography: desk, researcher, Ghana landscape.
+What sets us apart
+Differentiate from general accommodation
+Narrative section: vetting standard + full research support list.
+Single column. Left-border callout for the key differentiator sentence.
+Properties grid
+Browse the Collection
+Card per property: photo, name, location, price from, amenity icons, Enquire button.
+3-column grid desktop. 2-column tablet. 1-column mobile.
+Research support services
+List all support services
+Bulleted service list: research assistants / translation / community access / fieldwork logistics / visa support / airport pickup.
+Two-column list. Icon per service item.
+NGO & institutional
+Institutional booking pathway
+MOU description + institutional enquiry form.
+Grey background section. Form on right, description on left.
+Sankofa cross-link
+Surface the Diaspora Programme
+'While you're here' panel linking to /diaspora-programme.
+Full-width terracotta band. White text. One CTA.
+
+B.8  Diaspora Heritage Journeys — /diaspora-programme
+Hero
+Emotional resonance — return and reconnection
+Headline: 'Go back. Find what was lost. Come home to yourself.' Sub-headline.
+Full-width. Terracotta background or rich Africa photography. White text. Full viewport height.
+What this is
+Reframe from tour to return
+Narrative: this is not a tour, it is a return. Six countries listed.
+Single column with pull-quote treatment.
+Programme offerings
+Six programme types
+Heritage Tours / Cultural Immersion / Ancestral Connections / Diaspora Leadership Exchange / Healing & Reconnection / Pan African Journeys.
+3×2 card grid desktop. Stacked mobile. Each card: icon, headline, 2-line description.
+Country map
+Show geographic reach
+Six active countries. Nine expanding by 2027.
+Visual country list or illustrated map — not a data map. Text-based fallback acceptable in Phase 1.
+Enquiry form
+Capture programme interest
+Long-form enquiry with ancestry, travel window, programme type, group size.
+Two-column form desktop. Single column mobile.
+Snug Haven cross-link
+Surface accommodation partner
+'Where to stay' panel.
+Full-width green band.
+
+B.9  Social & Lifestyle — /discover
+Hero
+Warm welcome to lifestyle section
+Headline (TBD). Sub-headline.
+Full-width. Warm sand background. Rich lifestyle photography.
+Food & Dining
+Culinary directory + nightlife
+Culinary Directory CTA + Nightlife CTA.
+2-column feature cards.
+Art, Culture & Heritage
+Galleries and markets
+Gallery / Museum / Market descriptions + CTA: Browse Cultural Hubs.
+3-column cards.
+Leisure & Community
+Weekend escapes + language exchange
+Weekend Escapes card + Language Exchange card (Phase 2 placeholder).
+2-column cards. Language Exchange card: muted with 'Coming soon'.
+Monthly Meet & Greet
+Premium community events
+Description of monthly networking events at premium Accra venues.
+Feature card. Full width. Event listing or email capture for next event.
+
+B.10  Marketplace — /marketplace
+Hero
+Clear product statement
+Headline: 'Buy, sell, and find services.' Search bar with filters.
+Full-width. Blue accent. Search bar prominent.
+Category grid
+Browse all marketplace categories
+12 categories as icon tiles.
+4×3 grid desktop. 3-column tablet. 2-column mobile.
+Trust note
+Verify seller credibility
+Verified seller explanation + Communly badge definition.
+Left-border callout band.
+Prohibited items
+Legal and safety notice
+Short bulleted list of prohibited categories.
+Grey box. Small print. Bottom of page.
+Seller CTA
+Acquire new sellers
+Headline + body + CTA: Register as a seller.
+Full-width sand band.
+
+B.11  List Your Business — /list
+Hero
+Value proposition for vendors
+Headline: 'Reach the people already looking for you.' Community size.
+Full-width. Green background. White text.
+Section selector
+Route vendor to correct listing type
+4-row table: Directory / Property / Marketplace / Snug Haven — best for / what you list.
+Table. Full width. Each row links to the relevant registration flow.
+Tier comparison
+Convert free to Verified
+Free vs Communly Verified: 11-row comparison table.
+2-column comparison table. Verified column has green header.
+Free listing form
+Lowest-friction entry point
+Quick 9-field form for free directory listing.
+Right-aligned form. Left: benefit summary. Max-width 600px on form.
+
+B.12  About Communly — /about
+Hero
+Trust and credibility
+Headline: 'We are the team behind Ghana's most trusted expat community.'
+Full-width. Green background.
+Three belief sections
+Brand values
+Utility first / Trust is earned / Community is the product. Each: headline + paragraph.
+Single column. Alternating light/white backgrounds.
+Berecons connection
+Institutional credibility
+Short paragraph on Berecons group and BDI provenance.
+Grey callout band.
+
+
+B.13  Join the Community — /join
+Hero
+Community social proof
+Member count. Community description.
+Full-width. Green background.
+What you get
+Benefits list
+5-bullet benefit list + Facebook join button.
+Single column. Button: oversized, Facebook blue.
+Email capture
+Newsletter opt-in with dropdown: who are you.
+Full-width sand band. Form centred. Max 400px wide.
+
+B.14  Contact — /contact
+Hero
+Open invitation
+Headline: 'Talk to us.'
+Full-width. Standard green header.
+Contact categories
+Route enquiries correctly
+6-row table: General / Vendor support / Press / Partnerships / Snug Haven / Diaspora Programme.
+2-column table. Full width.
+Contact form
+Capture all enquiry types
+6-field form with subject dropdown.
+Centred. Max-width 640px.
+
+PART C
+Functional Specification
+Backend systems, user roles, and technical requirements for the developer
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+This entire section is system specification. None of this content appears on the live site. It is addressed to the developer and should be removed from any client-facing version of this document.
+
+C.1  Platform Recommendation
+Recommended stack
+WordPress with a custom theme. Plugins: WP Job Manager or Directories Pro (directory and listing backend), WooCommerce (marketplace transactions), MemberPress or ProfilePress (vendor accounts and dashboards), Advanced Custom Fields (custom listing fields), Gravity Forms or WS Form (verification and enquiry forms).
+Alternative stack
+Next.js with a headless CMS (Sanity or Contentful) and Supabase backend. Higher build cost; better long-term scalability. Recommended if the developer has strong React experience.
+Do not use
+Webflow — cannot handle vendor dashboards natively. Wix or Squarespace — insufficient for multi-role user management and custom listing workflows.
+Payment integration
+Paystack (primary): GHS, card, and mobile money. Stripe (secondary): international card payments and USD transactions for Snug Haven. Paystack has a native WooCommerce plugin. Commission tracking is manual in Phase 1.
+Hosting
+VPS or managed WordPress host: Kinsta, WP Engine, or a DigitalOcean droplet. Not shared hosting.
+Search
+Algolia or Elasticsearch for directory, property, marketplace, and guide search at scale.
+Email
+Transactional email via SendGrid or Postmark. Branded templates for all system emails.
+
+C.2  User Roles & Permissions
+Role
+Who
+Can do
+Cannot do
+Public visitor
+Any unauthenticated user
+Browse all public pages, read guides, view listings, submit enquiry forms, click Facebook Group join link
+Create listings, access dashboards, book Emergency Response services (member-gated)
+Registered vendor
+Approved business or service provider
+Create and manage own listings within approved categories, view enquiries, renew or pause listings, upgrade tier
+Edit other vendors' listings, access admin panel, change own category without admin approval
+Registered seller
+Approved marketplace seller
+List products and services, manage inventory, view messages and orders
+Access Real Estate or Directory sections without separate vendor approval
+Snug Haven partner host
+Approved partner property owner
+Update availability and rates on own property via dashboard
+Publish new properties without admin review and approval
+Admin
+Communly management team
+Approve or reject vendor applications, flag or remove any listing, edit all content, access all analytics, manage featured placements, send direct vendor communications, process commission invoices
+Unrestricted — full platform access
+
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+Vendor roles are category-specific at approval. A vendor approved for Healthcare cannot self-assign to Legal. Category changes require a new admin approval request submitted from the vendor dashboard. Exception: marketplace sellers may list across all marketplace categories once approved.
+
+C.3  Vendor Onboarding & Approval Flow
+This flow applies identically across all listing sections. The verification form fields differ by section.
+
+Step 1 — Registration
+Vendor completes the registration form: business name, contact details, section (Directory / Real Estate / Marketplace / Snug Haven partner), category, website or social proof, brief description. KYC verification submitted. Account created with Pending status. No listing access at this stage.
+Step 2 — Verification form
+Vendor is prompted immediately after registration to complete the section-specific verification form and upload supporting KYC documents.
+Step 3 — Admin review
+Admin receives a notification. Reviews registration and verification. Three options: Approve (vendor receives confirmation email and dashboard access), Reject (vendor receives explanation email with reapplication guidance), or Request more information (application held, query sent by email).
+Step 4 — Dashboard access
+Approved vendor logs in to the dashboard. Can create, edit, pause, and renew listings within their approved category. Cannot publish without completing all required fields.
+Step 5 — Listing publication
+New listings from approved vendors are published immediately on field completion. Admin receives a notification and can flag or remove at any time. Flagged listings are paused automatically pending admin decision.
+Step 6 — Renewals
+Housing listings: 30-day active period. Directory subscriptions: monthly. Vendor receives automated renewal reminders at 7 days and 3 days before expiry. Renewal is self-serve via dashboard.
+
+C.4  Admin Dashboard — Required Views
+	•	Pending vendor applications, sorted by date submitted
+	•	All active listings, filterable by section, category, tier, vendor, and date
+	•	Flagged listings awaiting admin decision
+	•	Rejected applications with reason logged
+	•	Vendor communications inbox (direct messaging)
+	•	Commission tracking: Communly-referred enquiries, confirmed lets or sales, invoices raised
+	•	Revenue summary: Verified Badge subscriptions, featured placements, listing fees, commission earned
+
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+Admin dashboard must not be accessible via any public-facing URL. Use /admin with IP restriction or a separate subdomain: admin.ghanaexpats.com. All admin actions are logged with timestamp and admin user ID for audit purposes.
+
+C.5  Verification Forms by Section
+Common base fields — all sections
+	•	Legal business or individual name
+	•	Trading name if different
+	•	Primary contact: name, phone, WhatsApp, email
+	•	Business address or operating area
+	•	Years in operation
+	•	Brief business description (200 words max)
+	•	Primary section and category (dropdown)
+	•	Website or active social media profile URL
+	•	At least one client reference: name and contact (Communly will call to verify)
+	•	Declaration: I confirm the above is accurate and I am authorised to list this business (checkbox)
+
+Real Estate — additional fields
+	•	Agent licence number or registration body (optional for individual landlords)
+	•	Company registration number (agencies)
+	•	Property types: residential rental, commercial rental, short-let, sale, or combination
+	•	Average number of active listings
+	•	Service area: neighbourhoods or regions
+	•	Proof of ownership or agency mandate (document upload: ID plus at minimum one property document)
+	•	Agreement to commission terms: 10–15% on Communly-referred completed lets or sales (tick-box with link to commission agreement)
+
+Marketplace — additional fields
+	•	Product or service category
+	•	Description of what will be listed
+	•	For physical goods: confirmation of ability to ship or arrange local collection
+	•	For food vendors: valid food handling certificate (document upload)
+	•	Payment methods accepted
+	•	Returns and refund policy (150 words max)
+
+Verified Directory — additional fields
+	•	Professional body registration, if applicable
+	•	Insurance or bonding status (required for healthcare, legal, security categories)
+	•	Agreement to a Communly vetting call (required for Verified tier)
+	•	Preferred tier: Free or Communly Verified (GH₵500 setup + GH₵250/month)
+
+Snug Haven partner property — additional fields
+	•	Property type: private room, ensuite room, serviced apartment, full house, guesthouse
+	•	Number of rooms or units
+	•	Location and neighbourhood
+	•	Amenities checklist: A/C, internet speed, generator backup, security, parking, workspace, kitchen access
+	•	Minimum 5 honest photographs: exterior, room, bathroom, kitchen or common area, neighbourhood
+	•	Nightly and monthly rates in USD
+	•	Minimum stay requirement
+	•	Availability calendar or confirmation that real-time availability will be maintained
+	•	Agreement to Snug Haven Collection standards and vetting visit (Communly team conducts a physical or video inspection before approval)
+
+
+C.6  Technical Requirements
+Mobile-first
+All pages, forms, and dashboards must function flawlessly at 375px minimum viewport width. The majority of community members access on mobile.
+Page speed
+Core Web Vitals pass required on all public-facing pages. Compress all images at upload. Lazy-load non-critical assets.
+Analytics
+Google Analytics 4 on all pages. Event tracking on: directory searches, form submissions, guide PDF downloads, CTA clicks, WhatsApp button clicks, listing views, vendor registrations, Facebook Group join clicks.
+SEO
+Clean URL structure as per sitemap (Part A). Schema markup: LocalBusiness for directory listings, Product for marketplace, RealEstateListing for property listings. Breadcrumb navigation. Meta title and description editable per page.
+Security
+SSL throughout. CAPTCHA on all public-facing forms. Rate limiting on registration and login endpoints. Admin panel IP-restricted or on a separate subdomain.
+Accessibility
+WCAG 2.1 AA minimum. Sufficient colour contrast on all text. All forms keyboard-navigable. Alt text on all images.
+Emergency UI
+Phone numbers and dispatch buttons on /emergency-response must be oversized and tap-friendly on mobile (minimum 56px touch target). No modals or multi-step flows at the point of action — one tap, one outcome.
+Subscription billing
+Verified Badge monthly subscriptions handled via Paystack recurring billing. Vendor dashboard shows next billing date and payment history.
+
+C.7  SEO Metadata
+Page
+Title tag
+Meta description
+Homepage
+Ghana Expats — Verified Directory, Guides & Community · GhanaExpats.com
+Ghana’s most trusted expat and diaspora platform. Verified services, relocation guides, and a community of 26,000 people who’ve been exactly where you are.
+Emergency Response
+24/7 Emergency & Utility Services Ghana · GhanaExpats.com
+Pre-vetted emergency security, ambulance, towing, water delivery, and gas swap services — operational around the clock in Ghana.
+Property & Investment
+Find Property in Ghana — Rentals, Sales & Short Stays · GhanaExpats.com
+Browse vetted residential and commercial property listings in Ghana. Short-stay serviced apartments, long-term leases, land, and sales — agents checked by Communly.
+Verified Directory
+Verified Expat Services Directory — Ghana · GhanaExpats.com
+Search Ghana’s most comprehensive verified directory: healthcare, legal, schools, transport, domestic help and more. Every Communly Verified listing has been checked.
+Snug Haven
+The Snug Haven Collection — Fieldwork Accommodation Across Ghana · GhanaExpats.com
+Work-ready short-stay accommodation and research support for academics, consultants, and NGO personnel in Ghana. From US$35/night.
+Diaspora Programme
+Diaspora Heritage Journeys — Heritage & Cultural Immersion · GhanaExpats.com
+Transformative heritage journeys for the African diaspora and Black African returnees across six African nations. Ancestral reconnection, homestays, and cultural immersion.
+Business in Ghana
+Doing Business in Ghana — Registration, Compliance & Advisory · GhanaExpats.com
+Practical guide to business registration, statutory compliance, and due diligence in Ghana. Verified corporate lawyers and advisory professionals listed.
+Arriving in Accra
+Arriving in Accra: Your First 30 Days Guide · GhanaExpats.com
+Everything you need for your first month in Accra — SIM cards, money, accommodation, healthcare, and staying safe. Written by people who live here.
+Finding Housing
+Finding Housing in Accra: The Expat Guide · GhanaExpats.com
+How the Accra rental market actually works. Neighbourhoods, agents, fees, lease advice, and how to avoid the most common scams. Updated 2026.
+International Schools
+International Schools in Ghana — 2026 Guide · GhanaExpats.com
+Comprehensive guide to international and accredited schools in Ghana: curriculum options, fees, neighbourhoods, admission timelines, and parent recommendations.
+Healthcare
+Healthcare for Expats in Ghana · GhanaExpats.com
+The expat guide to healthcare in Ghana. Private hospitals, international insurance, pharmacies, dental care, and emergency procedures — honest and up to date.
+Marketplace
+Ghana Expats Marketplace — Buy, Sell & Find Services · GhanaExpats.com
+Community marketplace for expats and diaspora in Ghana. Verified sellers. Physical goods, digital products, and professional services.
+
+C.8  Phase 1 Launch Checklist
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+For internal use only. Do not publish this checklist.
+
+	•	Homepage live and mobile-tested
+	•	24/7 Emergency Response hub live (Power / ECG section replaced with email capture placeholder: 'Coming soon — register your interest')
+	•	Property & Investment hub live with listing submission and vendor dashboard
+	•	Verified Directory live with minimum 40 listings across 10 categories
+	•	Business in Ghana landing page live
+	•	The Snug Haven Collection page live
+	•	Diaspora Heritage Journeys page live
+	•	Social & Lifestyle hub live
+	•	Vendor registration and verification flow fully functional end-to-end
+	•	Admin dashboard live with pending applications queue, listing management, and vendor communications
+	•	Arriving in Accra guide live
+	•	Finding Housing guide live
+	•	International Schools guide live (structure and opening sections)
+	•	Healthcare guide live (structure and opening sections)
+	•	About Communly and Contact pages live
+	•	Join the Community page live with Facebook Group link and email capture
+	•	Persistent Facebook Group join CTA confirmed in site header on all pages
+	•	Paystack integration tested in production
+	•	All transactional emails tested and delivered
+	•	Google Analytics 4 tracking confirmed on all pages
+	•	SSL certificate confirmed
+	•	Core Web Vitals tested and passing on mobile and desktop
+	•	Admin subdomain or IP restriction on /admin confirmed
+
+PART D
+Website Copy
+Production-ready British English copy for every page
+All copy below is production-ready British English. Region labels in brackets indicate page sections for the designer. Italic text in brackets is a designer or developer instruction and does not appear on the live site.
+
+Copy for The Snug Haven Collection (/snug-haven) is in the companion document: The Snug Haven Collection — Positioning Brief & Website Copy. Copy for Diaspora Heritage Journeys (/diaspora-programme) is in: The Sankofa Project — Positioning Brief & Website Copy. Update the title, eyebrow, URL, and meta title in those documents to reflect the finalised section names used here before handover to the developer. All body copy, positioning, and service descriptions in those documents remain valid.
+
+Internal reference — not a public page
+Platform overview
+GhanaExpats.com is the digital home of the Expats in Ghana Facebook Group, a community of 26,500 members built on trust, peer knowledge, and genuine mutual support. The website extends that community beyond Facebook, giving it a permanent, searchable, and commercially functional home. Every page carries a visible pathway for visitors to request membership of the Facebook Group, ensuring the two platforms feed each other continuously: the Group drives traffic to the site; the site converts visitors into community members.
+The platform is operated under the Communly brand. Berecons is the holding entity and operates entirely in the background. The community knows and trusts Communly. Berecons is never named publicly.
+Five principal functions
+	•	Community hub: serving as the official web presence of the Expats in Ghana Facebook Group, with a prominent join pathway on every page.
+	•	Community discovery: helping people find vetted, trusted services across a searchable directory of verified businesses and service providers.
+	•	Content authority: establishing GhanaExpats.com as the definitive source of relocation and lifestyle guidance for Ghana.
+	•	Marketplace: enabling peer-to-peer and vendor-to-consumer transactions for products and services relevant to the Ghana expat and diaspora community.
+	•	Featured programmes: housing The Snug Haven Collection and The Diaspora Heritage Journeys as premium, editorially curated products that sit above the general directory. The Snug Haven Collection serves international students seeking internship placements, researchers needing fieldwork support, visiting professors, and institutional consultants requiring host organisations and residential support. Diaspora Heritage Journeys anchors cultural reconnection, offering heritage tours, immersive experiences, ancestral linkages, and Pan African journeys. Together they establish GhanaExpats.com as both the definitive gateway for global scholars and practitioners and the premier platform for diaspora heritage engagement.
+
+Brand direction
+Positioning line: Ghana, without the guesswork.
+Tone: Warm, knowledgeable, and direct. Like a trusted friend who has been in Ghana for years and answers your questions honestly — including the uncomfortable ones. Practical first, then warm. Lead with the useful answer.
+Not: Not a corporate directory. Not a government portal. Not a generic Africa brand.
+On trust: Trust is the product. Every piece of content, every verified listing, every Q&A response builds or erodes it. Never overclaim. Never promote a vendor without vetting them.
+
+D.2
+Homepage
+ghanaexpats.com/
+[ PERSISTENT HEADER — every page ]
+[Left: Communly wordmark with green tick] [Centre: primary navigation] [Right: 'Join 26,500 members →' in small type with blue CTA button linking directly to the Facebook Group request page]
+
+[ HERO ]
+Ghana,
+without the guesswork.
+Your trusted guide to living, working, and thriving in Ghana. Verified services, honest guides, and a community of 26,000 people who have been exactly where you are.
+►  Browse the directory
+►  Join the community →
+
+[ AUDIENCE ROUTING — 2×2 card grid on desktop, stacked on mobile ]
+Whatever brought you to Ghana, we’ve got you.
+
+Card 1 — Relocating to Ghana
+Moving here? Start here.
+From finding a home to registering your children in school, our Relocation Guides cover every practical step — written by people who have done it.
+►  Read the guides →
+Card 2 — Looking for services
+Find vetted, verified businesses.
+Healthcare providers, lawyers, schools, domestic help, transport, artisans, and more — every listing checked by the Communly team before it goes live.
+►  Search the directory →
+
+Card 3 — Researchers, academics & NGOs
+For the work that brought you here.
+The Snug Haven Collection offers work-ready accommodation, research assistant sourcing, fieldwork logistics, and direct access to traditional leaders and community gatekeepers across Ghana.
+►  Explore The Snug Haven Collection →
+
+Card 4 — Diaspora & heritage travellers
+Ready to go back?
+Diaspora Heritage Journeys offers transformative heritage and cultural immersion experiences across six African nations — for the diaspora and Black African returnees who are ready to reconnect.
+►  Discover Diaspora Heritage Journeys →
+
+[ 24/7 EMERGENCY RESPONSE FEATURE BAND ]
+When things go wrong in Ghana, we go to work.
+Emergency security dispatch. Private ambulance. Towing and roadside assistance. On-call medical care. Midnight utility support. Pre-vetted, operational around the clock.
+►  Access the 24/7 Hub →
+[Note: member-gated services display a 'Join the community to access emergency response services' gate at the point of action]
+
+[ FEATURED PROGRAMMES — two panels side by side on desktop, stacked on mobile ]
+Two programmes. One purpose: making Ghana work for you.
+
+Panel 1 — The Snug Haven Collection
+[Eyebrow: Fieldwork Accommodation & Research Support]
+Your base in Ghana, wherever the work takes you.
+Vetted short-stay residences across Ghana, purpose-built for researchers, academics, and institutional consultants. Research assistant sourcing, fieldwork logistics, and community access — all from a single point of contact.
+►  Explore The Snug Haven Collection →
+[Secondary: From US$35/night]
+Panel 2 — Diaspora Heritage Journeys
+[Eyebrow: Heritage & Cultural Immersion]
+Go back. Find what was lost. Come home to yourself.
+Heritage tours, homestays, ancestral healing, and community integration programmes across six African nations — built on genuine community relationships, not a tourist itinerary.
+►  Discover Diaspora Heritage Journeys →
+
+[ DIRECTORY PREVIEW ]
+The most trusted expat directory in Ghana.
+From healthcare and legal advice to domestic help, artisans, and transport — every verified listing has been checked by the Communly team. Free to search. Free to list. Verified listings earn the badge that tells the community: this one has been vetted.
+[Category grid — 12 icons with labels: Healthcare · Legal · Schools · Transport · Domestic Support · Home Services · Food & Catering · Security · Immigration · Artisans · Financial · Emergency]
+►  Search the directory
+►  List your business
+
+[ GUIDES PREVIEW ]
+Everything you need to know. Written by people who’ve been here.
+[Three guide cards: Arriving in Accra / Finding Housing / Healthcare for Expats]
+►  Browse all guides →
+
+[ COMMUNITY SECTION ]
+26,000 people who get it.
+The Expats in Ghana Facebook Group is the go-to community for expats, diaspora returnees, and Ghana-curious travellers. Ask questions, share experience, find recommendations, and connect with people who have been exactly where you are.
+►  Join the Facebook Group →
+D.3
+24/7 Emergency Response & Utilities
+ghanaexpats.com/emergency-response
+
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+Booking and dispatch functions are member-gated. Visitors who are not logged in see the service listings and copy, but encounter a join gate at the point of action. Headline is TBD and to be written with the Communly team before launch.
+
+[ HERO ]
+[Headline: to be confirmed with the team]
+Power cut out at 2:00 AM? Stranded on the motorway? Water tank running dry? We do not do guesswork, and we do not do excuses. Welcome to your emergency safety net — vetted, trusted, and operational around the clock.
+►  Get Immediate Help Now
+►  Explore All Services
+
+[ SECTION 1: CRITICAL EMERGENCIES ]
+When things go wrong in the dead of night, you do not have time to sift through outdated phone numbers or negotiate prices in a panic. Our pre-vetted emergency response network deploys directly to your location.
+
+Vetted Security Escort & Dispatch
+Whether you are navigating an unfamiliar neighbourhood at night, moving high-value assets, or need an immediate security presence, we match you with trusted, legally operating private security details.
+►  Request Security Detail
+
+Ambulance & Medical Evacuation
+Instant connection to private ambulance fleets and emergency-response hospital ER lines equipped to handle emergencies professionally — bypassing unreliable channels.
+►  Call Private Ambulance
+
+Towing & Roadside Assistance
+Broken down on the highway? Access 24/7 flatbed towing, mobile tyre repair, battery jump-starts, and emergency fuel delivery.
+►  Dispatch Tow Truck
+
+
+
+Urgent Homecare & Midnight Pharmacy
+On-call doctors, overnight nursing support, and midnight prescription delivery brought directly to your doorstep.
+►  Request Medical Care
+
+[ SECTION 2: URGENT UTILITIES ]
+Living and working in Ghana is an incredible experience — until the infrastructure takes a night off. We bridge the gap between local utility hitches and your peace of mind.
+
+Emergency Water Deliveries
+Dry taps should not disrupt your life. We coordinate on-demand water tanker deliveries outside standard business hours, alongside emergency plumbers for sudden leaks or burst pipes.
+►  Order Water Tanker
+
+24/7 LPG Gas Swaps
+Running out of gas halfway through cooking is a serious frustration. Access mapped, late-night gas stations or request an on-demand cylinder swap delivered to your door.
+►  Swap My Gas Cylinder
+
+Power Support
+[COMING SOON PLACEHOLDER: 'Power support services are on the way. Register your interest below and we will notify you when this goes live.' + email capture field. Do not include ECG token or prepaid meter copy in Phase 1.]
+
+[ SECTION 3: HOW IT WORKS ]
+One touch. Zero stress.
+
+You tap for help.
+Tell us what you need in seconds.
+We secure the response.
+We dispatch our pre-vetted, contracted partners and lock in a transparent, fair price.
+Zero-friction settlement.
+You pay securely via Mobile Money. No hidden fees, no midnight haggling, no guesswork.
+►  Join the Community & Stay Protected →
+
+D.4
+Property & Investment
+ghanaexpats.com/real-estate
+
+[ HERO ]
+Find your home in Ghana.
+Residential lettings, commercial property, short-stay apartments, land, and property acquisition — from agents and landlords who have been verified by the Communly team.
+[Search bar: Location or neighbourhood — with filter toggles: Type (Short-stay / Mid-term rental / Long-term lease / Commercial / Land & sale), Bedrooms, Price range, Furnished / Unfurnished]
+
+[ TRUST NOTE ]
+Every agent and landlord listed on GhanaExpats Property has submitted a verification form and been reviewed by our team. Communly Verified agents carry a green badge — additionally vetted with a reference check and a direct call.
+
+[ LISTING TYPES ]
+Short-stay serviced apartments
+Fully furnished, immediately available. Ideal for first arrivals, project-based stays, and visitors who need a professional base without a long-term commitment.
+Mid-term rentals
+One to six months. Furnished or part-furnished. Suited to corporate assignees, consultants, and researchers on fixed-term engagements.
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+Mid-term rentals targeted at researchers and academics should carry a soft cross-link to The Snug Haven Collection: 'Looking for a fully supported research base? See The Snug Haven Collection.' This cross-link must not imply they are the same product.
+Long-term leases
+Six months and above. Standard Accra market terms apply — advance rent periods, agency fees, and lease clauses are covered in the Finding Housing guide.
+Commercial property
+Office spaces, retail hubs, and co-working environments. Filtered separately from residential.
+Land & property acquisition
+Vetted land listings, property sales, and legal title deed support. Agents in this category must hold valid documentation and have cleared the Communly due diligence check.
+House swaps
+Free to list and free to enquire. Swap your property abroad for a property in Ghana for a defined period.
+[ PRICING NOTE FOR VENDORS ]
+Listing fees are per property, not per month. Each listing is active for 30 days or until let or sold.
+
+Product
+Price
+Single property listing
+GH₵50–100 per listing
+Agent bundle
+GH₵400 for 10 listings, drawn down as needed
+Verified Agent badge
+GH₵250/month — covers your agent profile, separate from individual listings
+Commission on Communly-referred completions
+10–15% of first month’s rent
+
+►  List your property
+[FEATURED PROPERTY: Admin-assigned — photo, headline, location, price, agent with Verified badge, CTA: View property]
+[LISTINGS GRID: Filterable grid. Card: main photo, property type badge, bedrooms, location, price, agent name with Verified badge, date listed, CTA: View listing]
+
+D.5
+Verified Directory
+ghanaexpats.com/directory
+[ HERO ]
+Find it. Trust it. Get on with your life.
+Ghana’s most comprehensive verified directory for expats, diaspora returnees, and international visitors. Every Communly Verified listing has been assessed by our team. Free listings are welcome; the badge tells you who has been checked.
+[Search bar: What are you looking for? + category filter + location filter]
+
+[ CATEGORY GRID — 28 categories ]
+[7×4 icon grid with labels]
+
+Healthcare
+Legal & Solicitors
+Schools & Education
+Security & Guarding
+Immigration & Visa
+Customs & Clearance
+Transport & Logistics
+Home Services
+Domestic Support
+Nanny & Childcare
+Chauffeur Services
+Car Rental
+Beauty & Wellness
+Food & Catering
+Event Planning
+Photography & Media
+IT & Tech Support
+Shipping & Removals
+Financial & Banking
+Fitness & Sport
+Language & Tutoring
+Pet Care & Vets
+Mental Health
+Religious & Pastoral
+Artisans & Trades
+Emergency Contacts
+Tours & Travel
+Arts & Culture
+
+
+[ VERIFIED BADGE EXPLAINER ]
+What does Communly Verified mean?
+A Communly Verified badge means a member of our team has spoken to the business, checked their credentials, reviewed at least one client reference, and confirmed they are actively operating. It does not mean we guarantee every outcome — but it does mean we have done more than accept a form submission.
+Free listings are welcome and unverified. The badge is the signal. Look for the green tick.
+
+[ VENDOR CTA ]
+Are you a service provider?
+List your business free and start reaching Ghana’s most engaged expat and diaspora community. Upgrade to Communly Verified for priority placement, a trust badge, customer reviews, and a direct booking button.
+►  List your business →
+
+
+D.6
+Business in Ghana
+ghanaexpats.com/business
+
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+This page doubles as a guide and a directory routing page. It carries 3–5 inline CTAs linking to relevant directory categories (Legal & Solicitors, Financial & Banking, Immigration & Visa). It should link to the forthcoming Guide: Business in Ghana (/guides/business-in-ghana) when that page is built in Phase 2.
+
+[ HERO ]
+Ghana is open for business.
+For international investors, diaspora entrepreneurs, and foreign-owned or jointly managed businesses — a practical, honest guide to operating legally and compliantly in Ghana.
+
+[ SECTION OVERVIEW ]
+Doing business in Ghana involves navigating a specific regulatory landscape. This section covers what you need to know and connects you to verified professionals who can execute it.
+
+Business Registration
+The Ghana Investment Promotion Centre (GIPC) governs foreign business registration. Minimum capital requirements and sector restrictions apply. A verified corporate attorney or GIPC-registered agent can manage the process from document preparation to certificate issuance.
+Statutory Compliance
+All operating businesses in Ghana are subject to: the Ghana Revenue Authority (GRA) for tax registration and filing, the Social Security and National Insurance Trust (SSNIT) for employer contributions, and sector-specific licensing from bodies such as the Ghana Tourism Authority (GTA) and the Ghana Immigration Service (GIS) where applicable.
+
+Due Diligence
+Before entering any joint venture, acquiring property, or signing a commercial lease, independent due diligence is essential. Our directory lists verified corporate advisory and legal professionals who specialise in Ghana-market transactions.
+
+►  Find a verified corporate lawyer →
+►  Find a business registration agent →
+
+
+D.7
+Social & Lifestyle
+ghanaexpats.com/discover
+
+DEVELOPER / DESIGNER NOTE — NOT FOR PUBLICATION
+Do not place heritage trail or diaspora content on this page. That content belongs exclusively on /diaspora-programme. This section covers living culture: art, food, nightlife, leisure, and community events.
+
+[ HERO ]
+[Headline: to be confirmed with the Communly team before launch]
+Navigating a new country is not just about visas and internet tokens — it is about finding your rhythm. Whether you are looking for a quiet workspace café, a midnight plate of kelewele, a weekend beach escape, or a language group to join, we have vetted the spaces so you can bypass the tourist traps and connect directly with the culture.
+
+[ SECTION 1: FOOD & DINING ]
+From high-end fine dining to the legendary local chop bars you will not find on Google Maps, this is your unfiltered guide to eating and drinking well in Ghana.
+
+The Culinary Directory
+Curated culinary experiences for every palate. Filter through premium international restaurants, trusted local cafés, vegan-friendly hubs, and hidden street-food gems vetted for hygiene and flavour.
+►  Find a Table
+
+Lounges, Nightlife & Live Music
+When the sun goes down, Accra truly wakes up. Find jazz hubs, rooftop cocktail bars, elite nightclubs, and live highlife bands playing across the city.
+►  Explore the Nightlife
+
+[ SECTION 2: ART, CULTURE & HERITAGE ]
+Ghana’s creative energy is unmatched. Skip the commercial souvenir stalls and immerse yourself in the authentic local art and design scene.
+
+Galleries, Museums & Artisanal Markets
+Discover independent contemporary art galleries, historical museums, and curated artisan collectives. Find premium local craftsmanship at events like the Green Butterfly Market, pop-up garage sales, and Caramel Corner.
+[ SECTION 3: LEISURE & COMMUNITY ]
+Weekend Escapes & Eco-Resorts
+Need a break from Accra’s traffic? Head into the Aburi hills, book a riverside lodge in Ada, join a hiking club, or escape to the best surf and beach resorts along the coast.
+►  Plan an Escape
+
+Monthly Meet & Greet
+Every month, Communly hosts a curated networking event at a premium Accra venue — a relaxed, informal evening for expats, returnees, and locals who want to connect beyond the screen.
+[CTA: Register for the next event — links to event page or email capture when event is confirmed]
+
+Language Exchange & Peer Community
+True connection starts with communication. Join our community-led language exchange hubs to learn conversational Twi, Ga, or Ewe with peer tutors.
+[CTA: Join the Next Meetup — Phase 2, links to /language-exchange when live. In Phase 1, shows email capture: 'Launching soon — register your interest.']
+
+D.8
+List Your Business
+ghanaexpats.com/list
+[ HERO ]
+Reach the people already looking for you.
+GhanaExpats.com is where 26,000 expats, diaspora returnees, researchers, and international visitors search for services in Ghana. List your business here and get found by the people most likely to need you.
+
+[ SECTION SELECTOR ]
+Choose the section that best describes your offering.
+Section
+Best for
+What you list
+Verified Directory
+Service businesses across 28 categories
+Business profile with contact, photos, services, optional Verified Badge
+Property & Investment
+Agents and landlords
+Individual property listings on pay-per-listing terms
+Marketplace
+Products and services for sale
+Product and service listings with photos and price
+Snug Haven Collection
+Partner short-stay properties for academics and researchers
+Curated property — subject to inspection and approval
+
+[ TIER COMPARISON — Verified Directory ]
+Feature
+Free Listing
+Communly Verified — GH₵250/month
+Listed in directory
+✓
+✓
+Name, contact, category
+✓
+✓
+One photo
+✓
+✓
+Full profile with gallery
+—
+✓
+Communly Verified badge
+—
+✓
+Priority search ranking
+—
+✓
+Customer reviews
+—
+✓
+WhatsApp / booking button
+—
+✓
+Featured placement eligibility
+—
+✓
+Communly vetting call
+—
+✓
+Cost
+Free
+GH₵500 setup + GH₵250/month
+
+[ FREE LISTING FORM ]
+[FORM — fields: Business name · Category (dropdown) · Contact name · Phone · Email · WhatsApp · Location or neighbourhood · Brief description (150 words max) · Website (optional) · One photo upload · I confirm this business is actively operating (checkbox)]
+
+
+D.9
+Marketplace
+ghanaexpats.com/marketplace
+[ HERO ]
+Buy, sell, and find services.
+A community marketplace for expats, diaspora returnees, and locals in Ghana. Physical goods, professional services, and digital products — from verified sellers.
+[Search bar: What are you looking for? — Category / Condition / Price range / Location or delivery available]
+
+[ CATEGORIES ]
+Electronics & Tech  ·  Furniture & Home  ·  Clothing & Fashion  ·  Books & Education  ·  Food & Groceries  ·  Professional Services  ·  Digital Products  ·  Events & Experiences  ·  Vehicles  ·  Arts & Crafts  ·  Baby & Kids  ·  Other
+
+[ TRUST NOTE ]
+All sellers have been verified before their first listing goes live. The Communly Verified badge indicates sellers who have additionally passed a reference check and vetting call. Every listing carries a report function — flags are reviewed within 24 hours.
+
+[ PROHIBITED ITEMS ]
+The Communly Marketplace does not permit: weapons or ammunition, counterfeit or pirated goods, prescription medicines, live animals, adult content, or anything illegal under Ghanaian law.
+
+[ SELLER CTA ]
+Got something to sell? Offer a service?
+Register as a seller and reach Ghana’s most engaged expat and diaspora community. Approval is straightforward — complete the verification form and our team reviews within 48 hours.
+►  Register as a seller
+
+D.10
+Relocation Guides Hub
+ghanaexpats.com/guides
+
+[ HERO ]
+Everything you need to know about living in Ghana.
+Written by people who live here, have moved here, or have spent years helping others do the same. Practical, honest, and kept up to date. Free to read, always.
+
+[ GUIDE STRUCTURE — applies to all guides ]
+Opening
+Direct, honest two-paragraph introduction — who it is for, what it covers, what it does not
+Body
+Structured sections with subheadings. Short paragraphs. 3–5 directory CTAs embedded in-line, contextually
+Closing
+One-paragraph summary of the most important practical advice. Email capture: Download the offline checklist
+Sidebar or footer
+Facebook Group join link. Related guides. Relevant directory categories
+
+[Full copy for Guide 1 (Arriving in Accra), Guide 2 (Finding Housing structure), Guide 3 (International Schools structure), and Guide 4 (Healthcare structure) is carried forward from the approved previous draft without change.]
+
+
+D.11
+About Communly
+ghanaexpats.com/about
+[ HERO ]
+We are the team behind Ghana’s most trusted expat community.
+
+[ WHO WE ARE ]
+Communly is the management team behind the Expats in Ghana Facebook Group and GhanaExpats.com.
+We took over the community because we believed it deserved better infrastructure — a verified directory, honest guides, and a platform that treated its members as intelligent adults rather than a captive audience for advertising.
+We are not a faceless platform. We are a team of people who know Ghana — who have lived here, worked here, and spent years answering the same questions that newcomers arrive with every week. We built this because we knew we could answer them better.
+
+[ HOW WE WORK ]
+Three things we believe in.
+
+Utility first
+Every page on this site should do something useful for you. We do not publish content to fill space. We do not list businesses without vetting them. If something is here, it is because it genuinely helps.
+Trust is earned
+The Communly Verified badge is not for sale. It is the result of a conversation, a credentials check, and at least one client reference. Some businesses will not qualify. That is the point.
+The community is the product
+26,000 members. Years of collective knowledge. The Facebook Group is where Ghana’s expat and diaspora community has its real conversations — about housing, healthcare, safety, and the thousand small things that make a life in a new country easier or harder. We manage that space as a privilege, not a marketing channel.
+
+[ THE BERECONS CONNECTION ]
+Backed by Berecons.
+GhanaExpats.com is operated by Communly, a brand of the Berecons group. Berecons operates across institutional advisory (Berecons LLC), home services and logistics (Berecons Trading), and civil society development (the Berecons Development Initiative), which is the founding body behind The Snug Haven Collection and Diaspora Heritage Journeys.
+The community is managed with independence and editorial integrity. Berecons entities are held to the same vetting standard as any other directory listing. Commercial relationships are disclosed.
+
+D.12
+Join the Community
+ghanaexpats.com/join
+
+[ HERO ]
+26,500 people who get it.
+The Expats in Ghana Facebook Group is the longest-running and most active expat community for Ghana. Members share recommendations, answer questions, warn about scams, celebrate milestones, and look out for each other. It is the most useful thing you can access in your first week in Ghana — and for years after.
+
+[ WHAT YOU GET ]
+	•	Real answers from people who have been exactly where you are
+	•	Honest reviews before you commit to anything
+	•	The Communly weekly Q&A every Thursday — ask anything
+	•	Featured vendor recommendations from our team
+	•	A community that extends beyond the screen
+
+►  Join the Expats in Ghana Facebook Group →
+
+[ PREFER EMAIL? ]
+Subscribe to the Communly newsletter for a curated weekly roundup — new directory additions, featured vendors, new guides, and the most useful posts from the Group.
+[EMAIL CAPTURE — fields: First name · Email · I am: (dropdown: Relocating to Ghana / Already in Ghana / Considering a move / Diaspora returnee / Researcher or NGO / Other)]
+
+D.13
+Contact
+ghanaexpats.com/contact
+
+[ HERO ]
+Talk to us.
+Whether you are a community member with a question, a vendor needing support, a journalist, or a potential partner — we respond to every message.
+
+[ CONTACT CATEGORIES ]
+General enquiry
+Questions not answered in the guides or directory
+Vendor and listing support
+Help with your listing, verification form, dashboard, or billing
+Press and media
+Include your publication and deadline
+Partnerships and advertising
+Business development, sponsored content, community partnerships
+Snug Haven accommodation
+snughaven@berecons.org or WhatsApp +233 20 149 7813
+Diaspora Heritage Journeys
+projects@berecons.org
+
+[CONTACT FORM — fields: Name · Email · Phone (optional) · Subject (dropdown) · Message · How did you hear about us? (optional)]
+
+We aim to respond within one working day. For urgent matters, WhatsApp is fastest: +233 20 149 7813.
+
+D.14
+Global Footer
+Appears on every page
+Column 1 — Explore
+Directory  ·  Property & Investment  ·  Marketplace  ·  The Snug Haven Collection  ·  Diaspora Heritage Journeys  ·  Language Exchange  ·  Host Services
+
+Column 2 — Guides
+Arriving in Accra  ·  Finding Housing  ·  International Schools  ·  Healthcare  ·  Driving in Accra  ·  Visa & Immigration  ·  Cost of Living  ·  Safety & Security
+
+Column 3 — Work With Us
+List Your Business  ·  Register as a Vendor  ·  Communly Verified Badge  ·  Featured Placement  ·  Partner with Communly
+
+Column 4 — About
+About Communly  ·  Contact  ·  Join the Community  ·  berecons.org  ·  The Berecons Development Initiative
+
+Brand note
+GhanaExpats.com is operated by Communly, a brand of the Berecons group. Our mission is to make life in Ghana easier, safer, and more connected for every expat, diaspora returnee, and international visitor who chooses to be here.
+
+Legal line
+© 2026 GhanaExpats.com  ·  Operated by Communly  ·  All rights reserved  ·  Privacy Policy  ·  Terms of Use  ·  Vendor Terms
+
+Social links
+[Facebook: Expats in Ghana Group]  [Instagram: @communlygh]  [WhatsApp: +233 20 149 8115]
+
+D.15
+Error Pages & System Emails
+System copy — not public pages
+404 — Page not found
+This page seems to have gone off-grid.
+It happens — even in Ghana. The page you are looking for does not exist or may have moved.
+►  Go to the homepage
+►  Search the directory
+
+Form submission — success message
+Thank you. We have received your message and will be in touch within one working day. For urgent matters, WhatsApp is fastest: +233 20 149 7813.
+
+Vendor application — received
+Your application is with us. Our team will review your submission and respond within 48 hours. If we need anything further, we will be in touch by email.
+
+Vendor application — approved (email)
+Subject: You are approved — welcome to GhanaExpats.com
+
+Hello [Name],
+Your vendor application for [Business Name] has been approved. You can now log in to your dashboard and create your first listing.
+►  Go to my dashboard — ghanaexpats.com/dashboard
+If you have any questions about creating your listing or upgrading to Communly Verified, reply to this email and we will help you.
+The Communly team
+
+Vendor application — rejected (email)
+Subject: Your GhanaExpats.com vendor application
+
+Hello [Name],
+Thank you for applying to list on GhanaExpats.com. After reviewing your application, we are not able to approve it at this time. [REASON — admin enters specific reason before sending.]
+If you believe this decision is incorrect or your circumstances have changed, you are welcome to reapply. Reply to this email if you have questions.
+The Communly team
+
+Listing renewal reminder (email)
+Subject: Your listing ‘[Title]’ expires in 7 days — renew now to stay visible
+
+Hello [Name],
+Your listing ‘[Listing title]’ on GhanaExpats.com is due to expire on [Date]. Renew now to keep your business visible to Ghana’s most active expat and diaspora community.
+►  Renew my listing — GH₵[X]
+If you have questions or need to update your listing details, log in to your dashboard at ghanaexpats.com/dashboard.
+The Communly team

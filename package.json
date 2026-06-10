@@ -1,0 +1,26 @@
+{
+  "name": "ghana-expats-next",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "seed": "node -e \"console.log('Supabase-backed app: no local seed step required.')\""
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.1",
+    "better-sqlite3": "^11.10.0",
+    "date-fns": "^4.1.0",
+    "next": "^16.2.7",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.2.7"
+  }
+}
