@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { AppFrame, PageHero } from "@/components/site-shell";
+import { AppFrame } from "@/components/site-shell";
 import { getCurrentSession } from "@/lib/auth";
 import { getPageContent, getSectionsByTitle } from "@/lib/content";
 
@@ -19,16 +18,23 @@ export default async function AboutPage() {
 
   return (
     <AppFrame currentPath="/about" session={session}>
-      <PageHero
-        tone="green"
-        backdrop="hero-ghana"
-        eyebrow="About Communly"
-        title={hero.fields.Headline}
-        copy={whoWeAre.fields.Body}
-      />
+      <section className="image-hero">
+        <div className="about-hero-image">
+          <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/freedom%20and%20justice%202.jpg" alt="Independence Arch in Accra with palm trees" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        </div>
+        <div className="image-hero-overlay" style={{ background: "rgba(26, 58, 46, 0.60)" }} />
+        <div className="shell video-hero-shell" style={{ justifyContent: "center", textAlign: "center" }}>
+          <div className="image-hero-copy">
+            <h1>
+              <span className="hero-line hero-line-1">{hero?.fields.Headline || "About Communly"}</span>
+            </h1>
+            <p className="hero-copy" style={{ maxWidth: "520px" }}>{whoWeAre.fields.Body}</p>
+          </div>
+        </div>
+      </section>
 
       <section className="content-section">
-        <div className="shell about-editorial-shell">
+        <div className="shell">
           <div className="about-editorial-copy">
             <p className="eyebrow">Who we are</p>
             <h2>{whoWeAre.fields.Headline}</h2>
@@ -37,24 +43,6 @@ export default async function AboutPage() {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-          </div>
-          <div className="about-editorial-media">
-            <figure className="media-frame spotlight">
-              <Image
-                src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/nkrumah%20museum.jpg"
-                alt="Kwame Nkrumah Memorial Park in Accra"
-                fill
-                sizes="(max-width: 980px) 100vw, 42vw"
-              />
-            </figure>
-            <figure className="media-frame tall">
-              <Image
-                src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/freedom%20and%20justice%202.jpg"
-                alt="Palm tree in front of the Independence Arch in Accra"
-                fill
-                sizes="(max-width: 980px) 100vw, 42vw"
-              />
-            </figure>
           </div>
         </div>
       </section>

@@ -3,7 +3,7 @@ import { VideoSpotlight } from "@/components/ghana-media";
 import { MarketplaceListingCard } from "@/components/listing-cards";
 import { SearchToolbar } from "@/components/forms";
 import { PageSection } from "@/components/page-blocks";
-import { AppFrame, PageHero } from "@/components/site-shell";
+import { AppFrame } from "@/components/site-shell";
 import { getCurrentSession } from "@/lib/auth";
 import { marketplaceCategories } from "@/lib/catalog";
 import { getPageContent, getSectionsByTitle } from "@/lib/content";
@@ -41,13 +41,13 @@ export default async function MarketplacePage({ searchParams }) {
 
   return (
     <AppFrame currentPath="/marketplace" session={session}>
-      <PageHero
-        tone="dark"
-        backdrop="hero-marketplace"
-        eyebrow="Marketplace"
-        title={hero.fields.Headline}
-        copy={hero.fields.Body}
-        search={
+      <div className="beach-parallax" style={{ backgroundImage: "url('https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/beach%20with%20nice%20umbrellas.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed", height: "50vh", width: "100%" }}>
+      </div>
+      
+      <section className="content-section" style={{ paddingTop: "3rem" }}>
+        <div className="shell">
+          <h1 style={{ marginBottom: "0.5rem" }}>{hero.fields.Headline}</h1>
+          <p className="hero-copy" style={{ marginBottom: "2rem" }}>{hero.fields.Body}</p>
           <SearchToolbar
             action="/marketplace"
             placeholder={hero.fields["Search bar placeholder"]}
@@ -59,8 +59,8 @@ export default async function MarketplacePage({ searchParams }) {
             ]}
             submitLabel="Search marketplace"
           />
-        }
-      />
+        </div>
+      </section>
       <section className="content-section">
         <div className="shell marketplace-category-shell">
           <div className="section-intro">

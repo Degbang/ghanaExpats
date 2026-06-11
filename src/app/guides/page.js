@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { VideoSpotlight } from "@/components/ghana-media";
 import { GenericDocSection } from "@/components/page-blocks";
-import { AppFrame, PageHero } from "@/components/site-shell";
+import { AppFrame } from "@/components/site-shell";
 import { getCurrentSession } from "@/lib/auth";
 import { getPageContent } from "@/lib/content";
-import { guidesFeature } from "@/lib/ghana-media";
 
 export const metadata = {
   title: "Relocation Guides · GhanaExpats.com",
@@ -27,16 +25,18 @@ export default async function GuidesPage() {
 
   return (
     <AppFrame currentPath="/guides" session={session}>
-      <PageHero
-        tone="paper"
-        backdrop="hero-ghana"
-        eyebrow="Relocation Guides"
-        title={hero.fields.Headline}
-        copy={hero.fields.Body}
-      />
-      <section className="content-section">
-        <div className="shell section-shell">
-          <VideoSpotlight {...guidesFeature} />
+      <section className="image-hero">
+        <div className="guides-hero-image">
+          <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/freedom%20and%20justice%201.jpg" alt="Independence Arch with palm tree in Accra" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        </div>
+        <div className="image-hero-overlay" style={{ background: "linear-gradient(to right, rgba(26, 58, 46, 0.92) 0%, rgba(26, 58, 46, 0.65) 50%, rgba(26, 58, 46, 0.20) 100%)" }} />
+        <div className="shell video-hero-shell">
+          <div className="image-hero-copy">
+            <h1>
+              <span className="hero-line hero-line-1">{hero.fields.Headline}</span>
+            </h1>
+            <p className="hero-copy">{hero.fields.Body}</p>
+          </div>
         </div>
       </section>
       <section className="content-section">

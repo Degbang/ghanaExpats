@@ -4,7 +4,6 @@ import { RevealOnView } from "@/components/reveal-on-view";
 import { AppFrame } from "@/components/site-shell";
 import { getCurrentSession } from "@/lib/auth";
 import { getPageContent, getSectionsByTitle } from "@/lib/content";
-import { siteConfig } from "@/lib/catalog";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata("/");
@@ -110,9 +109,6 @@ export default async function HomePage() {
             <div className="community-band-media">
               <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/clad%20in%20kente%20people.jpg" alt="Community members in kente holding Ghana flags" />
               <div className="community-band-overlay" />
-              <div className="community-band-caption">
-                <h3>{siteConfig.memberCount} people who get it.</h3>
-              </div>
             </div>
           </div>
         </div>

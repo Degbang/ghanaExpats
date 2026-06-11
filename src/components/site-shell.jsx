@@ -77,17 +77,8 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="shell footer-shell">
-        <section className="footer-join-band">
-          <div className="footer-join-copy">
-            <p className="eyebrow badge-pill">{siteConfig.memberCount} members</p>
-            <h2>Join the Expats in Ghana community</h2>
-          </div>
-          <Link className="button primary-button" href="/join">
-            Join on Facebook →
-          </Link>
-        </section>
         <div className="footer-grid">
-          {siteConfig.footerColumns.map((column) => (
+          {siteConfig.footerColumns.slice(0, 3).map((column) => (
             <div key={column.title} className="footer-column">
               <h3>{column.title}</h3>
               <div className="footer-links">
