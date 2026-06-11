@@ -927,7 +927,7 @@ th {
 }
 
 .beach-parallax {
-  background-image: url("/media/ghana/images/beach-umbrellas.jpg");
+  background-image: url("https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/beach%20with%20nice%20umbrellas.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -943,7 +943,7 @@ th {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/media/ghana/images/beach-umbrellas.jpg") center / cover no-repeat;
+  background: url("https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/beach%20with%20nice%20umbrellas.jpg") center / cover no-repeat;
   opacity: 0.08;
 }
 
@@ -1149,7 +1149,7 @@ th {
 }
 
 .emergency-hero-image {
-  background: url("/media/ghana/images/police-emergency.jpg") 40% center / cover no-repeat;
+  background: url("https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/ghana%20police%20emergency.jpg") 40% center / cover no-repeat;
 }
 
 .emergency-hero-overlay {

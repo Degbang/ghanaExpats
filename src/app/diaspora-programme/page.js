@@ -29,8 +29,8 @@ export default async function DiasporaProgrammePage() {
   return (
     <AppFrame currentPath="/diaspora-programme" session={session}>
       <section className="video-hero">
-        <video autoPlay muted loop playsInline poster="/media/ghana/posters/ghana-flag-map.jpg">
-          <source src="/media/ghana/ghana-flag-map.mp4" type="video/mp4" />
+        <video autoPlay muted loop playsInline poster="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/freedom%20and%20justice%201.jpg">
+          <source src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/video%20of%20ghana%20flag%20on%20a%20map.mp4" type="video/mp4" />
         </video>
         <div className="video-hero-overlay" style={{ background: "linear-gradient(to top, rgba(139, 58, 31, 0.92) 0%, rgba(139, 58, 31, 0.62) 40%, rgba(139, 58, 31, 0.16) 80%, rgba(139, 58, 31, 0) 100%)" }} />
         <div className="shell video-hero-shell" style={{ justifyContent: "center", textAlign: "center" }}>
@@ -55,7 +55,7 @@ export default async function DiasporaProgrammePage() {
 
       <section className="content-section">
         <div className="full-width-photo">
-          <img src="/media/ghana/images/kente-community.jpg" alt="People in kente holding Ghana flags together" />
+          <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/clad%20in%20kente%20people.jpg" alt="People in kente holding Ghana flags together" />
         </div>
       </section>
 

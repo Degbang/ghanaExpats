@@ -37,7 +37,7 @@ export default async function SnugHavenPage() {
     <AppFrame currentPath="/snug-haven" session={session}>
       <section className="image-hero">
         <div className="snug-hero-image">
-          <img src="/media/ghana/images/nkrumah-museum.jpg" alt="Kwame Nkrumah Memorial Park in Accra" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/nkrumah%20museum.jpg" alt="Kwame Nkrumah Memorial Park in Accra" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
         <div className="image-hero-overlay" style={{ background: "rgba(26, 58, 46, 0.55)" }} />
         <div className="shell video-hero-shell" style={{ justifyContent: "center", textAlign: "center" }}>

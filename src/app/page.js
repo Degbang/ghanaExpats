@@ -69,8 +69,8 @@ export default async function HomePage() {
   return (
     <AppFrame currentPath="/" session={session}>
       <section className="home-hero">
-        <video autoPlay muted loop playsInline poster="/media/ghana/posters/arrival-drone.jpg">
-          <source src="/media/ghana/arrival-drone.mp4" type="video/mp4" />
+        <video autoPlay muted loop playsInline poster="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/posters/arrival-drone.jpg">
+          <source src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/arrival-drone.mp4" type="video/mp4" />
         </video>
         <div className="home-hero-overlay" />
         <div className="shell home-hero-shell">
@@ -108,7 +108,7 @@ export default async function HomePage() {
               </div>
             </div>
             <div className="community-band-media">
-              <img src="/media/ghana/images/kente-community.jpg" alt="Community members in kente holding Ghana flags" />
+              <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/clad%20in%20kente%20people.jpg" alt="Community members in kente holding Ghana flags" />
               <div className="community-band-overlay" />
               <div className="community-band-caption">
                 <h3>{siteConfig.memberCount} people who get it.</h3>
@@ -139,7 +139,7 @@ export default async function HomePage() {
 
       <section className="content-section">
         <RevealOnView as="div" className="photo-break reveal-up">
-          <img src="/media/ghana/images/fishing-community-overview.jpg" alt="Overview of a fishing community on the Ghanaian coast" />
+          <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/overview%20of%20ghana%20fishing%20community%2C%20top%20angle.jpg" alt="Overview of a fishing community on the Ghanaian coast" />
         </RevealOnView>
       </section>
 

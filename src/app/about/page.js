@@ -41,7 +41,7 @@ export default async function AboutPage() {
           <div className="about-editorial-media">
             <figure className="media-frame spotlight">
               <Image
-                src="/media/ghana/images/nkrumah-museum.jpg"
+                src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/nkrumah%20museum.jpg"
                 alt="Kwame Nkrumah Memorial Park in Accra"
                 fill
                 sizes="(max-width: 980px) 100vw, 42vw"
@@ -49,7 +49,7 @@ export default async function AboutPage() {
             </figure>
             <figure className="media-frame tall">
               <Image
-                src="/media/ghana/images/independence-arch-close.jpg"
+                src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/freedom%20and%20justice%202.jpg"
                 alt="Palm tree in front of the Independence Arch in Accra"
                 fill
                 sizes="(max-width: 980px) 100vw, 42vw"

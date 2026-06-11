@@ -16,7 +16,7 @@ export default async function JoinPage({ searchParams }) {
     "WHAT YOU GET",
     "EMAIL NEWSLETTER"
   ]);
-  const params = await searchParams;
+  const params = searchParams;
   const benefitItems = (benefits?.loose ?? [])
     .filter((line) => line.startsWith("- "))
     .map((line) => line.replace(/^- /, ""));
@@ -42,8 +42,8 @@ export default async function JoinPage({ searchParams }) {
 
       <section className="content-section" id="community-join">
         <div className="shell join-stage-shell">
-          <div className="join-stage-media">
-            <img src="/media/ghana/images/kente-community.jpg" alt="People dressed in kente holding Ghana flags together" />
+            <div className="join-stage-media">
+            <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/clad%20in%20kente%20people.jpg" alt="People dressed in kente holding Ghana flags together" />
           </div>
           <div className="join-stage-copy">
             <p className="eyebrow">What you get</p>
@@ -67,7 +67,7 @@ export default async function JoinPage({ searchParams }) {
       <section className="content-section" id="newsletter">
         <div className="shell join-secondary-shell">
           <div className="join-secondary-media">
-            <img src="/media/ghana/images/black-stars-supporter.jpg" alt="Ghana supporter in a red, gold, and green shirt in a cheering crowd" />
+            <img src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/ghana%20black%20stars%20suporteer%20in%20red%20yellow%20green%20shirt.jpg" alt="Ghana supporter in a red, gold, and green shirt in a cheering crowd" />
           </div>
           <div className="join-newsletter-panel">
             <div className="join-newsletter-copy">

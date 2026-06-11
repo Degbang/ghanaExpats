@@ -39,7 +39,7 @@ export default async function DiscoverPage() {
           </div>
           <figure className="media-frame spotlight">
             <Image
-              src="/media/ghana/images/beach-umbrellas.jpg"
+              src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/beach%20with%20nice%20umbrellas.jpg"
               alt="Colourful umbrellas arranged on a beach in Ghana"
               fill
               sizes="(max-width: 980px) 100vw, 46vw"
@@ -64,7 +64,7 @@ export default async function DiscoverPage() {
         <div className="shell discover-culture-shell">
           <figure className="media-frame spotlight">
             <Image
-              src="/media/ghana/images/kente-community.jpg"
+              src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/clad%20in%20kente%20people.jpg"
               alt="People dressed in kente holding Ghana flags"
               fill
               sizes="(max-width: 980px) 100vw, 44vw"
@@ -99,7 +99,7 @@ export default async function DiscoverPage() {
               <article key={block.title} className="discover-leisure-card">
                 <div className="media-frame wide">
                   <Image
-                    src={index === 0 ? "/media/ghana/images/fishing-community-overview.jpg" : "/media/ghana/images/black-stars-supporter.jpg"}
+                    src={index === 0 ? "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/overview%20of%20ghana%20fishing%20community%2C%20top%20angle.jpg" : "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/ghana%20black%20stars%20suporteer%20in%20red%20yellow%20green%20shirt.jpg"}
                     alt={index === 0
                       ? "Fishing community and harbour viewed from above"
                       : "Ghana supporter in a red, gold, and green shirt among a cheering crowd"}
@@ -132,14 +132,14 @@ export default async function DiscoverPage() {
               {meetup.fields["CTA Button"]}
             </Link>
           </div>
-          <figure className="media-frame spotlight">
-            <Image
-              src="/media/ghana/images/kente-community.jpg"
-              alt="Community members in Ghana holding flags and gathering together"
-              fill
-              sizes="(max-width: 980px) 100vw, 40vw"
-            />
-          </figure>
+            <figure className="media-frame spotlight">
+              <Image
+                src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/clad%20in%20kente%20people.jpg"
+                alt="Community members in Ghana holding flags and gathering together"
+                fill
+                sizes="(max-width: 980px) 100vw, 40vw"
+              />
+            </figure>
         </div>
       </section>
 

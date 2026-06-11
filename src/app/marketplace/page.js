@@ -13,9 +13,10 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata("/marketplace");
 
-function filterMarketplace(listings, searchParams) {
-  const q = searchParams?.q?.toLowerCase() ?? "";
-  const category = searchParams?.category ?? "";
+async function filterMarketplace(listings, searchParams) {
+  const sp = await searchParams;
+  const q = sp?.q?.toLowerCase() ?? "";
+  const category = sp?.category ?? "";
   return listings.filter((listing) => {
     const matchesQ = !q || [listing.title, listing.summary, listing.category].join(" ").toLowerCase().includes(q);
     const matchesCategory = !category || listing.category === category;
@@ -32,7 +33,7 @@ export default async function MarketplacePage({ searchParams }) {
     "PROHIBITED ITEMS",
     "SELLER CTA"
   ]);
-  const listings = filterMarketplace(await listListings("marketplace"), await searchParams);
+  const listings = await filterMarketplace(await listListings("marketplace"), searchParams);
   const featuredListings = listings.slice(0, 3);
   const otherListings = listings.slice(3);
   const categoryLeads = marketplaceCategories.slice(0, 6);

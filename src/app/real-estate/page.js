@@ -11,10 +11,11 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata("/real-estate");
 
-function filterListings(listings, searchParams) {
-  const q = searchParams?.q?.toLowerCase() ?? "";
-  const type = searchParams?.type ?? "";
-  const furnished = searchParams?.furnished ?? "";
+async function filterListings(listings, searchParams) {
+  const sp = await searchParams;
+  const q = sp?.q?.toLowerCase() ?? "";
+  const type = sp?.type ?? "";
+  const furnished = sp?.furnished ?? "";
 
   return listings.filter((listing) => {
     const matchesQ = !q || [listing.title, listing.location, listing.summary].join(" ").toLowerCase().includes(q);
@@ -34,7 +35,7 @@ export default async function RealEstatePage({ searchParams }) {
     "VENDOR PRICING"
   ]);
   const listings = await listListings("real-estate");
-  const filteredListings = filterListings(listings, await searchParams);
+  const filteredListings = await filterListings(listings, searchParams);
   const featured = listings.find((listing) => listing.featured);
 
   const typeCards = listingTypes.blocks.map((block) => ({
