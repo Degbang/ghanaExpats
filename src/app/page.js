@@ -69,8 +69,8 @@ export default async function HomePage() {
   return (
     <AppFrame currentPath="/" session={session}>
       <section className="home-hero">
-        <video autoPlay muted loop playsInline poster="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/posters/arrival-drone.jpg">
-          <source src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/arrival-drone.mp4" type="video/mp4" />
+        <video autoPlay muted loop playsInline poster="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/freedom%20and%20justice%201.jpg">
+          <source src="https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/drone%20shot%20of%20cars%20parked%20an%20dpeople%20getting%20off.mp4" type="video/mp4" />
         </video>
         <div className="home-hero-overlay" />
         <div className="shell home-hero-shell">

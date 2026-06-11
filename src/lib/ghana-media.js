@@ -11,8 +11,8 @@ export const ghanaHeroSlides = [
   {
     id: "arrival-drone",
     type: "video",
-    src: "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/arrival-drone.mp4",
-    poster: "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/posters/arrival-drone.jpg",
+    src: "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/drone%20shot%20of%20cars%20parked%20an%20dpeople%20getting%20off.mp4",
+    poster: "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/freedom%20and%20justice%201.jpg",
     alt: "Drone shot of cars parked and people getting off",
     label: "Arrival",
     caption: "From first landing to first pickup, the platform is built for the first practical steps."
@@ -20,8 +20,8 @@ export const ghanaHeroSlides = [
   {
     id: "accra-traffic",
     type: "video",
-    src: "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/accra-traffic.mp4",
-    poster: "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/posters/accra-traffic.jpg",
+    src: "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/nice%20slow%20mo%20shot%20of%20car%20and%20tricycle%20moving.mp4",
+    poster: "https://pub-934ea8ca1c414fc6bb57081527cb3f4a.r2.dev/freedom%20and%20justice%202.jpg",
     alt: "Slow-motion street scene with a car and tricycle moving in Ghana",
     label: "Daily movement",
     caption: "Transport, services, housing, and support for the reality of everyday life."
